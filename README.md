@@ -40,12 +40,12 @@ Ogni volta che carichi una modifica sul ramo `main`, GitHub Actions compila auto
 
 ### Creare una release
 
-Se crei un tag che inizia con `v`, il workflow allega l'APK a una release pubblica:
+1. Sulla pagina del repository apri **Releases** (colonna di destra) e scegli **Draft a new release**, oppure **Create a new release**.
+2. In **Choose a tag** scrivi `v1.0.0` e conferma **Create new tag: v1.0.0 on publish**.
+3. Dai un titolo, poi premi **Publish release**.
 
-```bash
-git tag v1.0.0
-git push origin v1.0.0
-```
+Il workflow **APK Android** parte da solo e, dopo circa due minuti, allega `ceneri-di-valdombra-debug.apk` alla release.
+Per le versioni successive usa `v1.0.1`, `v1.1.0` e così via.
 
 ### APK firmato per il Play Store (facoltativo)
 
