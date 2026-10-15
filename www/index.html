@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e1716">
+<link rel="icon" href="icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>Le Ceneri di Valdombra</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="app">
+  <header>
+    <h1><span id="missionTitle">Le Ceneri di Valdombra</span><small id="missionSub">Campagna</small></h1>
+    <span class="turn" id="turnLbl">Turno 1</span>
+    <span class="phase" id="phaseLbl">Il tuo turno</span>
+    <button class="iconbtn" id="audioBtn" aria-label="Audio">♪</button>
+    <button class="iconbtn" id="helpBtn" aria-label="Regole">?</button>
+  </header>
+
+  <main class="board" id="board">
+    <div class="map" id="map">
+      <canvas id="cv" aria-label="Campo di battaglia"></canvas>
+      <div class="banner" id="banner"><span></span></div>
+    </div>
+  </main>
+
+  <aside class="dock" id="dock">
+    <div class="card">
+      <canvas id="portrait" width="144" height="144"></canvas>
+      <div class="info">
+        <div class="nameRow"><h2 id="uName">Nessuna selezione</h2><span id="uTitle"></span><span class="ap" id="apPips"></span></div>
+        <div class="hp" id="hpBox"><div class="hpFill" id="hpFill"></div><span id="hpText"></span></div>
+        <p class="stats" id="uStats"></p>
+      </div>
+    </div>
+    <div class="actions" id="actions">
+      <button class="act" id="bMove" aria-pressed="false">Muovi<small id="bMoveSub"></small></button>
+      <button class="act" id="bAttack" aria-pressed="false">Attacco<small id="bAttackSub"></small></button>
+      <button class="act" id="bAbility" aria-pressed="false"><span id="bAbilityName">Abilità</span><small id="bAbilitySub"></small></button>
+    </div>
+    <div class="minors" id="minors">
+      <button class="minor" id="bWatch">Guardia</button>
+      <button class="minor" id="bHunker">In difesa</button>
+    </div>
+    <p class="hint" id="hint"></p>
+    <div class="row">
+      <button class="confirm" id="bConfirm" hidden>Conferma</button>
+      <button class="end" id="bEnd">Fine turno</button>
+    </div>
+  </aside>
+</div>
+
+<div class="overlay" id="intro" hidden>
+  <div class="scroll" role="dialog" aria-labelledby="introTitle">
+    <h2 id="introTitle">Come si gioca</h2>
+    <p class="lead">Un gioco di tattica a turni: ogni eroe si muove e agisce, poi tocca ai nemici.</p>
+    <ul>
+      <li>Sulla mappa di Valdombra tocca un luogo e viaggia fin lì. I luoghi dorati numerati sono la storia; le croci sono scontri ripetibili per fare esperienza; le stelle sono luoghi con un oggetto unico.</li>
+      <li>Ogni missione ha un obiettivo, scritto sotto il titolo: sconfiggere i nemici, resistere per alcuni turni, fuggire verso le caselle verdi a nord o proteggere un alleato segnato dalla stella dorata.</li>
+      <li>Ogni eroe ha due azioni per turno. Muoversi nelle caselle blu costa un'azione; lo scatto nelle caselle dorate le usa entrambe. Attaccare chiude il turno dell'eroe.</li>
+      <li>Ogni attacco mostra la probabilità di colpire. Rocce, boschi e rovine danno copertura, indicata dagli scudi: piena o a metà.</li>
+      <li>Un nemico scoperto, cioè senza copertura dalla tua direzione, subisce molti più colpi critici.</li>
+      <li>Le rocce bloccano la linea di tiro. Dall'altura si mira meglio e si tira più lontano.</li>
+      <li>Guardia: l'eroe tira al primo nemico che si muove nel suo raggio. In difesa: molto più difficile da colpire fino al tuo prossimo turno.</li>
+      <li>La palla di fuoco colpisce sempre, anche su caselle vuote, e brucia i boschi togliendo la copertura.</li>
+      <li>Ogni azione mostra la sua zona sulla mappa: rossa per gli attacchi, arancione per le abilità, gialla per la guardia. Le caselle scure sono a portata ma senza linea di tiro.</li>
+      <li>L'altare cura 2 punti vita a inizio turno a chi lo occupa. Tocca un nemico per vedere fin dove può colpire.</li>
+    </ul>
+    <button class="big" id="startBtn">Inizia la battaglia</button>
+  </div>
+</div>
+
+<section class="world" id="world" hidden>
+  <header class="wbar">
+    <div class="wtitle"><h1>Valdombra</h1><small id="wSub"></small></div>
+    <div class="xp"><span id="wLevel"></span><div class="xpbar"><i id="wXp"></i></div></div>
+    <div class="wbtns">
+      <button class="minor" id="wJournal">Diario</button>
+      <button class="minor" id="wCamp">Accampamento</button>
+      <button class="iconbtn" id="wAudio" aria-label="Audio">♪</button>
+      <button class="iconbtn" id="wHelp" aria-label="Regole">?</button>
+    </div>
+  </header>
+  <div class="wmap" id="wmap"><canvas id="wcv" aria-label="Mappa di Valdombra"></canvas></div>
+  <aside class="wpanel">
+    <p class="kicker" id="wKind"></p>
+    <h2 id="wName"></h2>
+    <p id="wDesc"></p>
+    <p class="muted" id="wMeta"></p>
+    <button class="big" id="wGo"></button>
+  </aside>
+</section>
+
+<div class="overlay" id="audioPanel" hidden>
+  <div class="scroll small" role="dialog" aria-labelledby="audioTitle">
+    <h2 id="audioTitle">Audio</h2>
+    <label class="tog"><input type="checkbox" id="aMusic"> Musica di sottofondo</label>
+    <label class="tog"><input type="checkbox" id="aSfx"> Effetti sonori</label>
+    <label class="vol"><span>Volume</span><input type="range" id="aVol" min="0" max="1" step="0.05"></label>
+    <button class="big" id="aClose">Chiudi</button>
+  </div>
+</div>
+
+<div class="overlay" id="story" hidden>
+  <div class="scroll story" role="dialog" aria-labelledby="storyTitle">
+    <canvas class="art" id="storyArt" hidden></canvas>
+    <p class="kicker" id="storyKicker"></p>
+    <h2 id="storyTitle"></h2>
+    <div id="storyBody"></div>
+    <div class="btns" id="storyBtns"></div>
+  </div>
+</div>
+
+<div class="overlay" id="camp" hidden>
+  <div class="scroll wide" role="dialog" aria-labelledby="campTitle">
+    <p class="kicker">Prima del prossimo capitolo</p>
+    <h2 id="campTitle">Accampamento</h2>
+    <p class="lead" id="campLead"></p>
+    <div id="campHeroes" class="heroes"></div>
+    <button class="big" id="campGo"></button>
+  </div>
+</div>
+<script src="js/data.js"></script>
+<script src="js/story.js"></script>
+<script src="js/world.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/campaign.js"></script>
+<script src="js/terrain.js"></script>
+<script src="js/miniatures.js"></script>
+<script src="js/battle-render.js"></script>
+</body>
+</html>
