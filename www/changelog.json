@@ -1,0 +1,132 @@
+[
+  {
+    "version": "1.3.0",
+    "title": "Inglese e spagnolo",
+    "features": [
+      "Il gioco è disponibile in italiano, inglese e spagnolo: la lingua segue quella del telefono e si cambia da ♪ → Lingua.",
+      "Tradotti storia, dialoghi, scelte, oggetti, abilità, sottoclassi, luoghi e mercati.",
+      "Le novità di ogni aggiornamento compaiono nella lingua scelta."
+    ],
+    "en": {
+      "title": "English and Spanish",
+      "features": [
+        "The game is now available in Italian, English and Spanish: it follows your phone's language, and you can change it from ♪ → Language.",
+        "Story, dialogue, choices, items, abilities, subclasses, places and markets are all translated.",
+        "Each update's notes appear in the language you chose."
+      ]
+    },
+    "es": {
+      "title": "Inglés y español",
+      "features": [
+        "El juego está disponible en italiano, inglés y español: sigue el idioma del teléfono y se cambia desde ♪ → Idioma.",
+        "Traducidos la historia, los diálogos, las decisiones, los objetos, las habilidades, las subclases, los lugares y los mercados.",
+        "Las novedades de cada actualización aparecen en el idioma elegido."
+      ]
+    }
+  },
+  {
+    "version": "1.2.0",
+    "title": "Scelte, sottoclassi e provviste",
+    "features": [
+      "Sette scelte nella storia cambiano eventi, battaglie, alleati e finale: risparmiare un goblin, rivelare un segreto, fidarsi di Ilvar, distruggere gli stampi dei sigilli, parlare con Morvane.",
+      "Dal livello 8 ogni eroe sceglie una delle tre sottoclassi: 15 in tutto, ognuna con abilità esclusive ai livelli 8, 11 e 14.",
+      "15 armi dedicate alle sottoclassi, nel bottino e nei mercati dell'Abbazia e di Frostal.",
+      "Consumabili: pozioni di cura, elisir di forza, tonici, pozioni di resistenza agli elementi, antidoti e acqua benedetta, da usare in battaglia con un'azione.",
+      "Stati alterati: veleno, sanguinamento, stordimento e maledizione, inflitti dai nemici e da alcune armi degli eroi.",
+      "Oggetti che danno immunità agli stati, e Luce sacra che li cura tutti.",
+      "I nemici elementali possono incendiare, bagnare o folgorare gli eroi: le resistenze proteggono anche da questo."
+    ],
+    "en": {
+      "title": "Choices, subclasses and supplies",
+      "features": [
+        "Seven choices in the story change events, battles, allies and the ending: spare a goblin, reveal a secret, trust Ilvar, destroy the seal moulds, talk to Morvane.",
+        "From level 8 each hero picks one of three subclasses: 15 in all, each with unique abilities at levels 8, 11 and 14.",
+        "15 subclass weapons, found as loot and in the markets of the Abbey and Frostal.",
+        "Consumables: healing potions, elixirs of strength, tonics, elemental resistance potions, antidotes and holy water, used in battle with one action.",
+        "Conditions: poison, bleeding, stun and curse, inflicted by enemies and by some heroes' weapons.",
+        "Items that grant immunity to conditions, and Holy Light that cures them all.",
+        "Elemental enemies can burn, drench or shock your heroes: resistances protect against that too."
+      ]
+    },
+    "es": {
+      "title": "Decisiones, subclases y provisiones",
+      "features": [
+        "Siete decisiones en la historia cambian sucesos, batallas, aliados y el final: perdonar a un goblin, revelar un secreto, fiarse de Ilvar, destruir los moldes de los sellos, hablar con Morvane.",
+        "Desde el nivel 8 cada héroe elige una de tres subclases: 15 en total, cada una con habilidades propias en los niveles 8, 11 y 14.",
+        "15 armas de subclase, en el botín y en los mercados de la Abadía y de Frostal.",
+        "Consumibles: pociones de curación, elixires de fuerza, tónicos, pociones de resistencia elemental, antídotos y agua bendita, que se usan en batalla con una acción.",
+        "Estados alterados: veneno, sangrado, aturdimiento y maldición, infligidos por los enemigos y por algunas armas de los héroes.",
+        "Objetos que dan inmunidad a los estados, y Luz sagrada que los cura todos.",
+        "Los enemigos elementales pueden quemar, empapar o electrocutar a los héroes: las resistencias también protegen de eso."
+      ]
+    }
+  },
+  {
+    "version": "1.1.0",
+    "title": "Fuoco, acqua e fulmine",
+    "features": [
+      "Armi elementali di fuoco, acqua e fulmine: il fuoco incendia, l'acqua rallenta e il fulmine salta sul nemico vicino.",
+      "Armature e amuleti con resistenze agli elementi, contro cultisti, spettri, adepti e cavalieri di cenere.",
+      "Ogni nemico ha debolezze e resistenze, indicate quando lo selezioni.",
+      "Quasi 50 nuovi oggetti, per un totale di 92, con la nuova rarità magica.",
+      "Bottino più vario: i nemici abbattuti possono lasciare oggetti e i capi ne lasciano sempre uno.",
+      "Le Corone di Brace, la valuta di Valdombra, si guadagnano in ogni battaglia.",
+      "Cinque mercati sulla mappa, a Campo della Lanterna, Corvara, Pietrabianca, all'Abbazia e a Frostal, per comprare e vendere.",
+      "Il gioco controlla da solo se su GitHub c'è una nuova versione e mostra le novità prima di scaricarla."
+    ],
+    "en": {
+      "title": "Fire, water and lightning",
+      "features": [
+        "Elemental weapons of fire, water and lightning: fire burns, water slows and lightning jumps to a nearby enemy.",
+        "Armor and amulets with elemental resistances, against cultists, wraiths, adepts and ash knights.",
+        "Every enemy has weaknesses and resistances, shown when you select it.",
+        "Almost 50 new items, 92 in total, with the new magic rarity.",
+        "More varied loot: defeated enemies can drop items and bosses always drop one.",
+        "Ember Crowns, the currency of Valdombra, earned in every battle.",
+        "Five markets on the map, in Lantern Camp, Corvara, Whitestone, the Abbey and Frostal, to buy and sell.",
+        "The game checks on its own for a new version on GitHub and shows what's new before downloading it."
+      ]
+    },
+    "es": {
+      "title": "Fuego, agua y rayo",
+      "features": [
+        "Armas elementales de fuego, agua y rayo: el fuego quema, el agua ralentiza y el rayo salta a un enemigo cercano.",
+        "Armaduras y amuletos con resistencias elementales, contra sectarios, espectros, adeptos y caballeros de ceniza.",
+        "Cada enemigo tiene debilidades y resistencias, visibles al seleccionarlo.",
+        "Casi 50 objetos nuevos, 92 en total, con la nueva rareza mágica.",
+        "Botín más variado: los enemigos abatidos pueden soltar objetos y los jefes siempre sueltan uno.",
+        "Las Coronas de Ascua, la moneda de Valdombra, se ganan en cada batalla.",
+        "Cinco mercados en el mapa, en el Campamento de la Linterna, Corvara, Piedrablanca, la Abadía y Frostal, para comprar y vender.",
+        "El juego comprueba solo si hay una nueva versión en GitHub y muestra las novedades antes de descargarla."
+      ]
+    }
+  },
+  {
+    "version": "1.0.0",
+    "title": "Le Ceneri di Valdombra",
+    "features": [
+      "Campagna di 40 capitoli in 5 atti, circa 10 ore di gioco.",
+      "Combattimento tattico su griglia esagonale ispirato a XCOM.",
+      "Cinque eroi, 15 livelli e 50 abilità.",
+      "Mappa del mondo con 50 luoghi, scontri ripetibili e luoghi segreti."
+    ],
+    "en": {
+      "title": "The Ashes of Valdombra",
+      "features": [
+        "A campaign of 40 chapters in 5 acts, about 10 hours of play.",
+        "Tactical combat on a hex grid inspired by XCOM.",
+        "Five heroes, 15 levels and 50 abilities.",
+        "A world map with 50 places, repeatable skirmishes and secret places."
+      ]
+    },
+    "es": {
+      "title": "Las Cenizas de Valdombra",
+      "features": [
+        "Una campaña de 40 capítulos en 5 actos, unas 10 horas de juego.",
+        "Combate táctico en cuadrícula hexagonal inspirado en XCOM.",
+        "Cinco héroes, 15 niveles y 50 habilidades.",
+        "Un mapa del mundo con 50 lugares, combates repetibles y lugares secretos."
+      ]
+    }
+  }
+]
